@@ -39,7 +39,7 @@ class OptimizeImagesCheck extends Command
 
         $this->info('Running');
 
-        $files = \File::allFiles('/Volumes/Data/Desarrollo/www/vintage/ckfinder/userfiles/images');
+        $files = \File::allFiles(env('DIR_IMAGES'));
         $names_new = [];
 
         $names = \File::get(storage_path('app/public/temp/names.txt'));
